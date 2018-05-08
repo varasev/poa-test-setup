@@ -30,13 +30,13 @@ function main() {
 	
 	// Hardcode ABIs into helpers.js
 	const pathToKeysManagerJSON = `${constants.contractsFolder}/KeysManager.json`;
-	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi).replace(',', ', ');
+	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi).replace(/,/g, ', ');
 	
 	const pathToPoaNetworkConsensusJSON = `${constants.contractsFolder}/PoaNetworkConsensus.json`;
-	const poaNetworkConsensusABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToPoaNetworkConsensusJSON)).abi).replace(',', ', ');
+	const poaNetworkConsensusABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToPoaNetworkConsensusJSON)).abi).replace(/,/g, ', ');
 	
 	const pathToValidatorMetadataJSON = `${constants.contractsFolder}/ValidatorMetadata.json`;
-	const validatorMetadataABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToValidatorMetadataJSON)).abi).replace(',', ', ');
+	const validatorMetadataABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToValidatorMetadataJSON)).abi).replace(/,/g, ', ');
 	
 	const dappHelpers = `${constants.pathToValidatorsDAppRepo}/src/contracts/helpers.js`;
 	let dappHelpersContent = fs.readFileSync(dappHelpers, 'utf8');

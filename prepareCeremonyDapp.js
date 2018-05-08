@@ -29,7 +29,7 @@ function main() {
 	
 	// Hardcode ABIs into helpers.js
 	const pathToKeysManagerJSON = `${constants.contractsFolder}/KeysManager.json`;
-	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi).replace(',', ', ');
+	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi).replace(/,/g, ', ');
 	
 	const dappHelpers = `${constants.pathToCeremonyDAppRepo}/src/helpers.js`;
 	let dappHelpersContent = fs.readFileSync(dappHelpers, 'utf8');
