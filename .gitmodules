@@ -6,18 +6,10 @@
 	path = submodules/poa-scripts-moc
 	url = https://github.com/poanetwork/poa-scripts-moc
 	branch = sokol
-[submodule "submodules/poa-network-consensus-contracts"]
-	path = submodules/poa-network-consensus-contracts
-	url = https://github.com/poanetwork/poa-network-consensus-contracts
-	branch = demo
 [submodule "submodules/poa-dapps-validators"]
 	path = submodules/poa-dapps-validators
 	url = https://github.com/poanetwork/poa-dapps-validators
 	branch = core
-[submodule "submodules/poa-dapps-voting"]
-	path = submodules/poa-dapps-voting
-	url = https://github.com/poanetwork/poa-dapps-voting
-	branch = demo
 [submodule "submodules/poa-dapps-keys-generation"]
 	path = submodules/poa-dapps-keys-generation
 	url = https://github.com/poanetwork/poa-dapps-keys-generation
