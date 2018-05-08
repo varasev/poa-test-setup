@@ -30,21 +30,20 @@ function main() {
 	
 	// Hardcode ABIs into helpers.js
 	const pathToKeysManagerJSON = `${constants.contractsFolder}/KeysManager.json`;
-	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi);
+	const keysManagerABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToKeysManagerJSON)).abi).replace(',', ', ');
 	
 	const pathToPoaNetworkConsensusJSON = `${constants.contractsFolder}/PoaNetworkConsensus.json`;
-	const poaNetworkConsensusABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToPoaNetworkConsensusJSON)).abi);
+	const poaNetworkConsensusABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToPoaNetworkConsensusJSON)).abi).replace(',', ', ');
 	
 	const pathToValidatorMetadataJSON = `${constants.contractsFolder}/ValidatorMetadata.json`;
-	const validatorMetadataABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToValidatorMetadataJSON)).abi);
+	const validatorMetadataABI = JSON.stringify(JSON.parse(fs.readFileSync(pathToValidatorMetadataJSON)).abi).replace(',', ', ');
 	
 	const dappHelpers = `${constants.pathToValidatorsDAppRepo}/src/contracts/helpers.js`;
 	let dappHelpersContent = fs.readFileSync(dappHelpers, 'utf8');
 	const abiAddition = `
     if (contract == 'KeysManager') return ${keysManagerABI};
     else if (contract == 'PoaNetworkConsensus') return ${poaNetworkConsensusABI};
-    else if (contract == 'ValidatorMetadata') return ${validatorMetadataABI};
-    `;
+    else if (contract == 'ValidatorMetadata') return ${validatorMetadataABI};`;
 	
 	const lastGetABI = `function getABI(branch, contract) {`;
 	dappHelpersContent = dappHelpersContent.replace(lastGetABI, lastGetABI + abiAddition);
