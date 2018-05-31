@@ -18,3 +18,11 @@
 	path = submodules/poa-dapps-voting
 	url = https://github.com/varasev/poa-dapps-voting
 	branch = demo
+[submodule "submodules/poa-network-consensus-contracts"]
+	path = submodules/poa-network-consensus-contracts
+	url = https://github.com/varasev/poa-network-consensus-contracts
+	branch = master
+[submodule "submodules/poa-dapps-validators"]
+	path = submodules/poa-dapps-validators
+	url = https://github.com/varasev/poa-dapps-validators
+	branch = core
