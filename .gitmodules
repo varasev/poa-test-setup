@@ -22,3 +22,7 @@
 	path = submodules/poa-dapps-voting
 	url = https://github.com/varasev/poa-dapps-voting
 	branch = core
+[submodule "submodules/poa-dapps-keys-generation"]
+	path = submodules/poa-dapps-keys-generation
+	url = https://github.com/varasev/poa-dapps-keys-generation
+	branch = core
