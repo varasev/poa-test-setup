@@ -58,7 +58,7 @@ At the successful end of POA test setup start you'll see this message: `### POA 
 
 `npm run launch-dapps`
 
-For Ubuntu users: if you encounter any errors during DApps launching try to increase `max_user_watches` limit and repeat steps:
+For Ubuntu users: if you encounter any errors during DApps launching, try to increase `max_user_watches` limit and repeat steps:
 
 ```bash
 $ npm run stop-test-setup
