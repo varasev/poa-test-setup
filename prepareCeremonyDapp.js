@@ -9,7 +9,7 @@ function main() {
 	const pathToAddressesJSON = `${constants.pathToContractRepo}/${constants.addressesSourceFile}`;
 	const addresses = JSON.parse(fs.readFileSync(pathToAddressesJSON));
 
-	const addition = `const local = { "KEYS_MANAGER_ADDRESS": "${addresses.KEYS_MANAGER_ADDRESS}" };`
+	const addition = `const local = { "KEYS_MANAGER_ADDRESS": "${addresses.KEYS_MANAGER_ADDRESS}" }\n`
 
 	let addressesFromDapp = fs.readFileSync(`${constants.pathToCeremonyDAppRepo}/src/addresses.js`, 'utf8');
 	
