@@ -13,7 +13,7 @@
     "node-fetch": "^2.0.0",
     "password-generator": "^2.2.0",
     "path": "^0.12.7",
-    "poa-dapps-keys-generation": "github:varasev/poa-dapps-keys-generation#883d06dc9874d066c113c93adb08b5016d2262d8",
+    "poa-dapps-keys-generation": "github:varasev/poa-dapps-keys-generation#core",
     "poa-dapps-validators": "github:varasev/poa-dapps-validators#core",
     "poa-dapps-voting": "github:varasev/poa-dapps-voting#core",
     "selenium-webdriver": "3.6.0",
